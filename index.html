@@ -942,6 +942,33 @@
     .benefits-grid { grid-template-columns: 1fr; }
     .about-stats { grid-template-columns: 1fr 1fr; }
   }
+.crystal-image{
+  width:170px;
+  height:170px;
+  object-fit:contain;
+  position:relative;
+  z-index:1;
+  animation:float 4s ease-in-out infinite;
+  filter:drop-shadow(0 0 20px rgba(255,255,255,.15));
+}
+
+.crystal-main-image{
+  width:220px;
+  height:220px;
+  object-fit:contain;
+  animation:float 5s ease-in-out infinite;
+  filter:drop-shadow(0 0 40px rgba(139,92,246,0.7))
+         drop-shadow(0 0 80px rgba(212,175,55,0.3));
+}
+
+.ring-gem{
+  position:absolute;
+  width:48px;
+  height:48px;
+  object-fit:cover;
+  border-radius:50%;
+  filter:drop-shadow(0 0 8px rgba(212,175,55,.5));
+}
 </style>
 </head>
 <body>
@@ -1013,7 +1040,7 @@
       <div class="product-card reveal">
         <div class="product-img pi-amethyst">
           <span class="product-badge">Best Seller</span>
-          <span class="crystal-emoji">💜</span>
+          <img src="images/amethyst-cluster.png" class="crystal-image" alt="Amethyst">
         </div>
         <div class="product-body">
           <h3 class="product-name">Amethyst Cluster</h3>
@@ -1032,7 +1059,7 @@
 
       <div class="product-card reveal">
         <div class="product-img pi-rose">
-          <span class="crystal-emoji">🌸</span>
+          <img src="images/rose-quartz.png" class="crystal-image" alt="Rose Quartz">
         </div>
         <div class="product-body">
           <h3 class="product-name">Rose Quartz Heart</h3>
@@ -1052,7 +1079,7 @@
       <div class="product-card reveal">
         <div class="product-img pi-lapis">
           <span class="product-badge">New Arrival</span>
-          <span class="crystal-emoji">🔵</span>
+          <img src="images/lapis-lazuli.png" class="crystal-image" alt="Lapis Lazuli">
         </div>
         <div class="product-body">
           <h3 class="product-name">Lapis Lazuli Sphere</h3>
@@ -1071,7 +1098,7 @@
 
       <div class="product-card reveal">
         <div class="product-img pi-obsidian">
-          <span class="crystal-emoji">🖤</span>
+          <img src="images/black-obsidian.png" class="crystal-image" alt="Black Obsidian">
         </div>
         <div class="product-body">
           <h3 class="product-name">Black Obsidian Tower</h3>
@@ -1091,7 +1118,7 @@
       <div class="product-card reveal">
         <div class="product-img pi-citrine">
           <span class="product-badge">✦ Popular</span>
-          <span class="crystal-emoji">🌟</span>
+          <img src="images/citrine.png" class="crystal-image" alt="Citrine">
         </div>
         <div class="product-body">
           <h3 class="product-name">Citrine Abundance Stone</h3>
@@ -1110,7 +1137,7 @@
 
       <div class="product-card reveal">
         <div class="product-img pi-clear">
-          <span class="crystal-emoji">🔮</span>
+          <img src="images/clear-quartz.png" class="crystal-image" alt="Clear Quartz">
         </div>
         <div class="product-body">
           <h3 class="product-name">Clear Quartz Master Crystal</h3>
@@ -1259,12 +1286,14 @@
       <div class="about-visual reveal">
         <div class="crystal-cluster">
           <div class="crystal-ring">
-            <span class="ring-gem">💜</span>
-            <span class="ring-gem">🌟</span>
-            <span class="ring-gem">🔵</span>
-            <span class="ring-gem">🌸</span>
+            <img src="images/gem1.png" class="ring-gem" alt="">
+            <img src="images/gem2.png" class="ring-gem" alt="">
+            <img src="images/gem3.png" class="ring-gem" alt="">
+            <img src="images/gem4.png" class="ring-gem" alt="">
           </div>
-          <span class="crystal-main">🔮</span>
+          <img src="images/main-crystal.png"
+    		 class="crystal-main-image"
+     		 alt="Crystal">
         </div>
       </div>
     </div>
@@ -1288,14 +1317,14 @@
           <div class="contact-icon">📱</div>
           <div>
             <div class="contact-label">WhatsApp Orders</div>
-            <div class="contact-value">+977-9851359109<br><span style="font-size:0.75rem;color:var(--gold)">Fastest way to order!</span></div>
+            <div class="contact-value">+977-98XXXXXXXX<br><span style="font-size:0.75rem;color:var(--gold)">Fastest way to order!</span></div>
           </div>
         </div>
         <div class="contact-item reveal">
           <div class="contact-icon">📍</div>
           <div>
             <div class="contact-label">Location</div>
-            <div class="contact-value">Kathmandu<br>Nepal</div>
+            <div class="contact-value">Thamel, Kathmandu<br>Nepal</div>
           </div>
         </div>
         <div class="contact-item reveal">
@@ -1456,7 +1485,7 @@ window.addEventListener('scroll', () => {
 });
 
 /* ── WHATSAPP ───────────────────────────────────────────── */
-const WA_NUMBER = '9851359109'; 
+const WA_NUMBER = '9779851359109'; 
 function orderWhatsApp(product) {
   const msg = `✨ Hello Mystic Aura Stone!\n\nI'm interested in ordering:\n🔮 *${product}*\n\nPlease share more details about availability and shipping. Thank you! 🙏`;
   const url = `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(msg)}`;
