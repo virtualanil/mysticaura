@@ -6,8 +6,7 @@
 <title>Mystic Aura Stone — Crystal Healing & Spiritual Energy</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Cinzel:wght@400;500;600&family=Raleway:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
 <style>
   /* ── TOKENS ─────────────────────────────────────────── */
@@ -335,12 +334,13 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
     box-shadow: 0 20px 60px rgba(91,45,168,0.35), 0 0 0 1px rgba(212,175,55,0.3);
   }
   .product-img {
-    height: 230px;
-    display: grid;
-    place-items: center;
-    font-size: 5rem;
+    height: 260px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     position: relative;
     overflow: hidden;
+    padding: 20px;
   }
   .product-img::before {
     content: '';
@@ -360,12 +360,20 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
   .pi-citrine::before { background: radial-gradient(circle at 50% 50%, rgba(240,208,96,0.35), transparent); }
   .pi-clear    { background: radial-gradient(ellipse, #1e1e3a, #070714); }
   .pi-clear::before { background: radial-gradient(circle at 50% 50%, rgba(196,181,253,0.3), transparent); }
-  .crystal-emoji {
-    font-size: 4.5rem;
+  .crystal-image{
+    width: 100%;
+    max-width: 210px;
+    height: auto;
+    max-height: 220px;
+    object-fit: contain;
     position: relative;
     z-index: 1;
-    filter: drop-shadow(0 0 20px currentColor);
     animation: float 4s ease-in-out infinite;
+    filter: drop-shadow(0 0 25px rgba(255,255,255,0.2));
+    transition: transform 0.3s ease;
+  }
+  .product-card:hover .crystal-image {
+    transform: scale(1.05);
   }
   .product-badge {
     position: absolute;
@@ -914,12 +922,6 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
     70%  { box-shadow: 0 0 0 18px rgba(37,211,102,0); }
     100% { box-shadow: 0 0 0 0 rgba(37,211,102,0); }
   }
-  @keyframes particleDrift {
-    0%   { transform: translateY(100vh) rotate(0deg); opacity: 0; }
-    10%  { opacity: 1; }
-    90%  { opacity: 1; }
-    100% { transform: translateY(-100px) rotate(720deg); opacity: 0; }
-  }
 
   /* ── REVEAL ON SCROLL ────────────────────────────────── */
   .reveal {
@@ -939,20 +941,27 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
     .benefits-grid { grid-template-columns: 1fr 1fr; }
     .testi-grid { grid-template-columns: 1fr; }
     .about-stats { grid-template-columns: repeat(3, 1fr); }
+    .product-img {
+      height: 220px;
+      padding: 16px;
+    }
+    .crystal-image {
+      max-width: 180px;
+      max-height: 190px;
+    }
   }
   @media (max-width: 420px) {
     .benefits-grid { grid-template-columns: 1fr; }
     .about-stats { grid-template-columns: 1fr 1fr; }
+    .product-img {
+      height: 200px;
+      padding: 14px;
+    }
+    .crystal-image {
+      max-width: 160px;
+      max-height: 170px;
+    }
   }
-.crystal-image{
-  width:170px;
-  height:170px;
-  object-fit:contain;
-  position:relative;
-  z-index:1;
-  animation:float 4s ease-in-out infinite;
-  filter:drop-shadow(0 0 20px rgba(255,255,255,.15));
-}
 
 .crystal-main-image{
   width:220px;
@@ -1112,7 +1121,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
           </div>
           <div class="product-footer">
             <div class="product-price">NPR 1000 <span>/ piece</span></div>
-            <button class="btn-order" onclick="orderWhatsApp('Black Obsidian Tree)">💬 Order</button>
+            <button class="btn-order" onclick="orderWhatsApp('Black Obsidian Tree')">💬 Order</button>
           </div>
         </div>
       </div>
@@ -1293,9 +1302,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
             <img src="Stainless Steel Bracelet.jpg" class="ring-gem" alt="">
             <img src="Pyrite Bracelet.jpg" class="ring-gem" alt="">
           </div>
-          <img src="7 chakra Stones Tree.png"
-    		 class="crystal-main-image"
-     		 alt="Crystal">
+          <img src="7 chakra Stones Tree.png" class="crystal-main-image" alt="Crystal">
         </div>
       </div>
     </div>
@@ -1341,37 +1348,18 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
           <div>
             <div class="contact-label">Find Us Online</div>
             <div class="socials">
-             <div class="socials">
-
-  <a class="social-link"
-     href="https://instagram.com"
-     target="_blank"
-     title="Instagram">
-     <i class="fab fa-instagram"></i>
-  </a>
-
-  <a class="social-link"
-     href="https://facebook.com"
-     target="_blank"
-     title="Facebook">
-     <i class="fab fa-facebook-f"></i>
-  </a>
-
-  <a class="social-link"
-     href="https://tiktok.com"
-     target="_blank"
-     title="TikTok">
-     <i class="fab fa-tiktok"></i>
-  </a>
-
-  <a class="social-link"
-     href="https://wa.me/9779851359109"
-     target="_blank"
-     title="WhatsApp">
-     <i class="fab fa-whatsapp"></i>
-  </a>
-
-</div>
+              <a class="social-link" href="https://instagram.com" target="_blank" title="Instagram">
+                <i class="fab fa-instagram"></i>
+              </a>
+              <a class="social-link" href="https://facebook.com" target="_blank" title="Facebook">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a class="social-link" href="https://tiktok.com" target="_blank" title="TikTok">
+                <i class="fab fa-tiktok"></i>
+              </a>
+              <a class="social-link" href="https://wa.me/9779851359109" target="_blank" title="WhatsApp">
+                <i class="fab fa-whatsapp"></i>
+              </a>
             </div>
           </div>
         </div>
@@ -1387,12 +1375,12 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
         <div class="form-group">
           <select>
             <option value="" disabled selected>I'm interested in...</option>
-            <option>Amethyst Cluster</option>
-            <option>Rose Quartz Heart</option>
-            <option>Lapis Lazuli Sphere</option>
-            <option>Black Obsidian Tower</option>
-            <option>Citrine Abundance Stone</option>
-            <option>Clear Quartz Master Crystal</option>
+            <option>Money Magnet</option>
+            <option>Clear Quartz</option>
+            <option>7 Chakra</option>
+            <option>Black Obsidian Tree</option>
+            <option>Dream Catcher</option>
+            <option>Crystal Bracelets</option>
             <option>Crystal Healing Set</option>
             <option>Custom Crystal Consultation</option>
           </select>
@@ -1508,35 +1496,34 @@ revealEls.forEach(el => io.observe(el));
 /* ── NAV SCROLL EFFECT ─────────────────────────────────── */
 window.addEventListener('scroll', () => {
   const nav = document.querySelector('nav');
-  nav.style.background = window.scrollY > 60
-    ? 'rgba(4,3,10,0.92)'
-    : 'rgba(4,3,10,0.7)';
+  if (window.scrollY > 50) {
+    nav.style.background = 'rgba(4,3,10,0.92)';
+    nav.style.borderBottomColor = 'rgba(212,175,55,0.35)';
+  } else {
+    nav.style.background = 'rgba(4,3,10,0.7)';
+    nav.style.borderBottomColor = 'rgba(212,175,55,0.2)';
+  }
 });
 
-/* ── WHATSAPP ───────────────────────────────────────────── */
-const WA_NUMBER = '9779851359109'; 
+/* ── WHATSAPP FUNCTIONS ────────────────────────────────── */
 function orderWhatsApp(product) {
-  const msg = `✨ Hello Mystic Aura Stone!\n\nI'm interested in ordering:\n🔮 *${product}*\n\nPlease share more details about availability and shipping. Thank you! 🙏`;
-  const url = `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(msg)}`;
-  window.open(url, '_blank');
+  const message = `✨ Hello! I'm interested in ordering:\n\n🔹 ${product}\n\nCould you please share more details?`;
+  const encoded = encodeURIComponent(message);
+  window.open(`https://wa.me/9779851359109?text=${encoded}`, '_blank');
 }
 
 function sendWhatsAppForm() {
-  const name = document.getElementById('fname').value || 'Customer';
-  const select = document.querySelector('select');
-  const product = select.value || 'Crystal Collection';
-  const msg = `✨ Hello Mystic Aura Stone!\n\nMy name is *${name}*.\n\nI'm interested in: *${product}*\n\nPlease help me place an order. Thank you! 🙏`;
-  const url = `https://wa.me/${+9779851359109}?text=${encodeURIComponent(msg)}`;
-  window.open(url, '_blank');
+  const name = document.getElementById('fname').value || 'Not provided';
+  const phone = document.querySelector('input[type="tel"]').value || 'Not provided';
+  const interest = document.querySelector('select').value || 'Not specified';
+  const message = document.querySelector('textarea').value || 'No additional message';
+  
+  const whatsappMessage = `✨ New Crystal Order Inquiry!\n\n👤 Name: ${name}\n📱 Phone: ${phone}\n💎 Interested In: ${interest}\n📝 Message: ${message}\n\nPlease guide me through the ordering process.`;
+  
+  const encoded = encodeURIComponent(whatsappMessage);
+  window.open(`https://wa.me/9779851359109?text=${encoded}`, '_blank');
 }
-
-/* ── STAGGER PRODUCT CARDS ─────────────────────────────── */
-document.querySelectorAll('.product-card.reveal').forEach((card, i) => {
-  card.style.transitionDelay = `${i * 0.1}s`;
-});
-document.querySelectorAll('.benefit-card.reveal').forEach((card, i) => {
-  card.style.transitionDelay = `${i * 0.08}s`;
-});
 </script>
+
 </body>
 </html>
