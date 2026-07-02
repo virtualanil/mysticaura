@@ -333,21 +333,28 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
   .product-card:hover {
     transform: translateY(-8px);
     box-shadow: 0 20px 60px rgba(91,45,168,0.35), 0 0 0 1px rgba(212,175,55,0.3);
-  }
-  .product-img {
-    height: 230px;
-    display: grid;
-    place-items: center;
-    font-size: 5rem;
-    position: relative;
-    overflow: hidden;
-  }
-  .product-img::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    opacity: 0.6;
-  }
+.product-img{
+    height:280px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding:20px;
+    overflow:hidden;
+}
+
+.crystal-image{
+    width:100%;
+    max-width:220px;
+    max-height:220px;
+    object-fit:contain;
+    object-position:center;
+    display:block;
+    transition:.35s ease;
+}
+
+.product-card:hover .crystal-image{
+    transform:scale(1.08);
+}
   .pi-amethyst { background: radial-gradient(ellipse, #3b1f6b, #1a0d33); }
   .pi-amethyst::before { background: radial-gradient(circle at 50% 50%, rgba(139,92,246,0.5), transparent); }
   .pi-rose     { background: radial-gradient(ellipse, #5a1a3a, #1a0820); }
@@ -1042,19 +1049,19 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
       <div class="product-card reveal">
         <div class="product-img pi-amethyst">
           <span class="product-badge">Best Seller</span>
-          <img src="Money Magnet.jpg" class="crystal-image" alt="Amethyst">
+          <img src="Money Magnet.jpg" class="crystal-image" alt="Money Magnet">
         </div>
         <div class="product-body">
-          <h3 class="product-name">Amethyst Cluster</h3>
-          <p class="product-desc">Raw Uruguayan amethyst known for deepening intuition, promoting restful sleep, and clearing negative energy fields.</p>
+          <h3 class="product-name">Money Magnet</h3>
+          <p class="product-desc">Attract wealth, abundance, and success with the Money Magnet crystal. Ideal for manifestation, positivity, and financial growth.</p>
           <div class="product-tags">
-            <span class="tag">Intuition</span>
-            <span class="tag">Calm</span>
-            <span class="tag">Protection</span>
+            <span class="tag">Wealth</span>
+            <span class="tag">Prosperity</span>
+            <span class="tag">Good Luck</span>
           </div>
           <div class="product-footer">
-            <div class="product-price">NPR 1,800 <span>/ piece</span></div>
-            <button class="btn-order" onclick="orderWhatsApp('Amethyst Cluster')">💬 Order</button>
+            <div class="product-price">NPR 750 <span>/ piece</span></div>
+            <button class="btn-order" onclick="orderWhatsApp('Money Magnet')">💬 Order</button>
           </div>
         </div>
       </div>
@@ -1064,16 +1071,16 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
           <img src="Clear Cquartz Crystal.png" class="crystal-image" alt="Clear Quartz">
         </div>
         <div class="product-body">
-          <h3 class="product-name">Clear Quartz Heart</h3>
-          <p class="product-desc">The stone of unconditional love. Opens the heart chakra, invites self-compassion, and strengthens emotional bonds.</p>
+          <h3 class="product-name">Clear Quartz</h3>
+          <p class="product-desc">Clear Quartz is a powerful healing crystal known for clarity, balance, and amplifying positive energy. Ideal for meditation, healing, and everyday use.</p>
           <div class="product-tags">
-            <span class="tag">Love</span>
+            <span class="tag">Positive Energy</span>
             <span class="tag">Healing</span>
-            <span class="tag">Heart Chakra</span>
+            <span class="tag">Energy Amplifier</span>
           </div>
           <div class="product-footer">
             <div class="product-price">NPR 1,200 <span>/ piece</span></div>
-            <button class="btn-order" onclick="orderWhatsApp('Rose Quartz Heart')">💬 Order</button>
+            <button class="btn-order" onclick="orderWhatsApp('Clear Quartz')">💬 Order</button>
           </div>
         </div>
       </div>
@@ -1085,34 +1092,34 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
         </div>
         <div class="product-body">
           <h3 class="product-name">7 Chakra</h3>
-          <p class="product-desc">Royal blue wisdom stone treasured since ancient Egypt. Activates the third eye, enhances truth-seeking and clarity of mind.</p>
+          <p class="product-desc">Balance and align your energy with the 7 Chakra crystal, designed to promote harmony, healing, and overall well-being.</p>
           <div class="product-tags">
-            <span class="tag">Wisdom</span>
-            <span class="tag">Truth</span>
-            <span class="tag">Third Eye</span>
+            <span class="tag">Meditation</span>
+            <span class="tag">Spiritual Healing</span>
+            <span class="tag">Wellness</span>
           </div>
           <div class="product-footer">
-            <div class="product-price">NPR 2,400 <span>/ piece</span></div>
-            <button class="btn-order" onclick="orderWhatsApp('Lapis Lazuli Sphere')">💬 Order</button>
+            <div class="product-price">NPR 1800 <span>/ piece</span></div>
+            <button class="btn-order" onclick="orderWhatsApp('7 Chakra')">💬 Order</button>
           </div>
         </div>
       </div>
 
       <div class="product-card reveal">
         <div class="product-img pi-obsidian">
-          <img src="Black Stone Tree.png" class="crystal-image" alt="Black Obsidian Tree">
+          <img src="Black Obsidian Tree.png" class="crystal-image" alt="Black Obsidian Tree">
         </div>
         <div class="product-body">
           <h3 class="product-name">Black Obsidian Tree</h3>
-          <p class="product-desc">A powerful psychic shield formed from volcanic glass. Absorbs negativity and anchors your energy deep into the earth.</p>
+          <p class="product-desc">The Black Obsidian Tree is a powerful protection crystal that helps absorb negative energy, promote grounding, and bring balance to your space.</p>
           <div class="product-tags">
             <span class="tag">Grounding</span>
             <span class="tag">Shield</span>
-            <span class="tag">Clarity</span>
+            <span class="tag">Home Decor</span>
           </div>
           <div class="product-footer">
-            <div class="product-price">NPR 1,600 <span>/ piece</span></div>
-            <button class="btn-order" onclick="orderWhatsApp('Black Obsidian Tree')">💬 Order</button>
+            <div class="product-price">NPR 1000 <span>/ piece</span></div>
+            <button class="btn-order" onclick="orderWhatsApp('Black Obsidian Tree)">💬 Order</button>
           </div>
         </div>
       </div>
@@ -1124,34 +1131,34 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
         </div>
         <div class="product-body">
           <h3 class="product-name">Dream Catcher</h3>
-          <p class="product-desc">The merchant's stone of prosperity. Radiates solar energy that attracts wealth, success, and joyful manifestation.</p>
+          <p class="product-desc">A beautiful Dream Catcher believed to filter negative dreams while inviting peace, positivity, and restful sleep.</p>
           <div class="product-tags">
-            <span class="tag">Abundance</span>
-            <span class="tag">Success</span>
-            <span class="tag">Solar Plexus</span>
+            <span class="tag">Peaceful Sleep</span>
+            <span class="tag">Calming Atmosphere</span>
+            <span class="tag">Stress Relief</span>
           </div>
           <div class="product-footer">
             <div class="product-price">NPR 1,100 <span>/ piece</span></div>
-            <button class="btn-order" onclick="orderWhatsApp('Citrine Abundance Stone')">💬 Order</button>
+            <button class="btn-order" onclick="orderWhatsApp('Big Dream Catcher')">💬 Order</button>
           </div>
         </div>
       </div>
 
       <div class="product-card reveal">
         <div class="product-img pi-clear">
-          <img src="Clear Cquartz Crystal.png" class="crystal-image" alt="Clear Quartz">
+          <img src="All Bracelet.jpg" class="crystal-image" alt="Bracelets">
         </div>
         <div class="product-body">
-          <h3 class="product-name">Clear Quartz Master Crystal</h3>
-          <p class="product-desc">The master healer of the crystal kingdom. Amplifies your intentions and brings clarity, focus, and powerful spiritual energy.</p>
+          <h3 class="product-name">Bracelets</h3>
+          <p class="product-desc">Crystal bracelets crafted from natural gemstones to promote positive energy, balance, protection, and everyday style.</p>
           <div class="product-tags">
-            <span class="tag">Amplifier</span>
-            <span class="tag">Focus</span>
-            <span class="tag">All Chakras</span>
+            <span class="tag">Confidence</span>
+            <span class="tag">Emotional Well-being</span>
+            <span class="tag">Spiritual Growth</span>
           </div>
           <div class="product-footer">
-            <div class="product-price">NPR 2,000 <span>/ piece</span></div>
-            <button class="btn-order" onclick="orderWhatsApp('Clear Quartz Master Crystal')">💬 Order</button>
+            <div class="product-price">NPR 1200 <span>/ piece</span></div>
+            <button class="btn-order" onclick="orderWhatsApp('All Crystal Bracelet')">💬 Order</button>
           </div>
         </div>
       </div>
@@ -1288,10 +1295,10 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
       <div class="about-visual reveal">
         <div class="crystal-cluster">
           <div class="crystal-ring">
-            <img src="images/gem1.png" class="ring-gem" alt="">
-            <img src="images/gem2.png" class="ring-gem" alt="">
-            <img src="images/gem3.png" class="ring-gem" alt="">
-            <img src="images/gem4.png" class="ring-gem" alt="">
+            <img src="Moon Stone Bracelet.jpg" class="ring-gem" alt="">
+            <img src="Pyrite Raw Rings.jpg" class="ring-gem" alt="">
+            <img src="Stainless Steel Bracelet.jpg" class="ring-gem" alt="">
+            <img src="Pyrite Bracelet.jpg" class="ring-gem" alt="">
           </div>
           <img src="7 chakra Stones Tree.png"
     		 class="crystal-main-image"
@@ -1341,7 +1348,9 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
           <div>
             <div class="contact-label">Find Us Online</div>
             <div class="socials">
-             <a class="social-link"
+             <div class="socials">
+
+  <a class="social-link"
      href="https://instagram.com"
      target="_blank"
      title="Instagram">
@@ -1524,7 +1533,7 @@ function sendWhatsAppForm() {
   const select = document.querySelector('select');
   const product = select.value || 'Crystal Collection';
   const msg = `✨ Hello Mystic Aura Stone!\n\nMy name is *${name}*.\n\nI'm interested in: *${product}*\n\nPlease help me place an order. Thank you! 🙏`;
-  const url = `https://wa.me/9779851359109?text=${encodeURIComponent(msg)}`;
+  const url = `https://wa.me/${+9779851359109}?text=${encodeURIComponent(msg)}`;
   window.open(url, '_blank');
 }
 
