@@ -333,28 +333,21 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
   .product-card:hover {
     transform: translateY(-8px);
     box-shadow: 0 20px 60px rgba(91,45,168,0.35), 0 0 0 1px rgba(212,175,55,0.3);
-.product-img{
-    height:280px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    padding:20px;
-    overflow:hidden;
-}
-
-.crystal-image{
-    width:100%;
-    max-width:220px;
-    max-height:220px;
-    object-fit:contain;
-    object-position:center;
-    display:block;
-    transition:.35s ease;
-}
-
-.product-card:hover .crystal-image{
-    transform:scale(1.08);
-}
+  }
+  .product-img {
+    height: 230px;
+    display: grid;
+    place-items: center;
+    font-size: 5rem;
+    position: relative;
+    overflow: hidden;
+  }
+  .product-img::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    opacity: 0.6;
+  }
   .pi-amethyst { background: radial-gradient(ellipse, #3b1f6b, #1a0d33); }
   .pi-amethyst::before { background: radial-gradient(circle at 50% 50%, rgba(139,92,246,0.5), transparent); }
   .pi-rose     { background: radial-gradient(ellipse, #5a1a3a, #1a0820); }
