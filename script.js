@@ -88,7 +88,7 @@ window.addEventListener('scroll', () => {
 });
 
 /* ── WHATSAPP ───────────────────────────────────────────── */
-const WA_NUMBER = '9779851359109'; 
+const WA_NUMBER = '9779765377227'; 
 function orderWhatsApp(product) {
   const msg = `✨ Hello Mystic Aura Stone!\n\nI'm interested in ordering:\n🔮 *${product}*\n\nPlease share more details about availability and shipping. Thank you! 🙏`;
   const url = `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(msg)}`;
@@ -100,7 +100,7 @@ function sendWhatsAppForm() {
   const select = document.querySelector('select');
   const product = select.value || 'Crystal Collection';
   const msg = `✨ Hello Mystic Aura Stone!\n\nMy name is *${name}*.\n\nI'm interested in: *${product}*\n\nPlease help me place an order. Thank you! 🙏`;
-  const url = `https://wa.me/${+9779851359109}?text=${encodeURIComponent(msg)}`;
+  const url = `https://wa.me/${+9779765377227}?text=${encodeURIComponent(msg)}`;
   window.open(url, '_blank');
 }
 
